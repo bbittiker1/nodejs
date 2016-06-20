@@ -1,0 +1,17 @@
+{
+  "name": "nodejs webservice",
+  "version": "0.1.0",
+  "description": "webservice for geekathon",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "express": "^4.14.0"
+  }
+}

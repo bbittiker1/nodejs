@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://ssndob.so/search/result/2921276 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>SSNDOB.CC - Result</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="./ssndob_usssnresult_files/bootstrap.min.css" rel="stylesheet">
+		<style>
+			body {
+				padding-top: 60px;
+			}
+		</style>
+		<link href="./ssndob_usssnresult_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<script src="./ssndob_usssnresult_files/jquery.js"></script>
+		<script src="./ssndob_usssnresult_files/bootstrap.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="/js/html5.js"></script>
+		<![endif]-->
+		<script>
+			$(document).ready(function() {
+				$("td#buyInfo").live("click", function() {
+					if($(this).data("b") !== 1) {
+						$(this).data("b", 1);
+						$.ajax({
+							url: "/search/ajax",
+							type: "POST",
+							cache: false,
+							data: "action=buyResult&id="+$(this).data("id"),
+							dataType: "json",
+							beforeSend: function() {
+								$(this).text("Plase Wait...");
+							},
+							success: function(data) {
+								if(data["result"]) {
+									$("#i"+data["id"]+"ssn").html(data["ssn"].join("<br>\n"));
+									$("#i"+data["id"]+"dob").html(data["dob"].join("<br>\n"));
+								} else {
+									alert(data["reason"]);
+								}
+							}
+						});
+					} else {
+						alert("Already buy it");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="http://ssndob.so/news">SSNDOB.CC</a>
+					<div class="btn-group pull-right">
+						<a class="btn" href="http://ssndob.so/settings"><i class="icon-user"></i> smithster69 ($20.55)</a>
+						<button class="btn dropdown-toggle" data-toggle="dropdown" href=""><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="http://ssndob.so/settings"><i class="icon-pencil"></i> Edit</a></li>
+							<li><a href="http://ssndob.so/billing"><i class="icon-shopping-cart"></i> Bitcoin Billing</a></li>
+							<li><a href="http://ssndob.so/billing/litecoin"><i class="icon-shopping-cart"></i> Litecoin Billing</a></li>
+							<li class="divider"></li>
+							<li><a href="http://ssndob.so/logout"><i class="icon-remove"></i> Exit</a></li>
+						</ul>
+					</div>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="http://ssndob.so/search">US SSNDOB Search</a></li>
+							<li><a href="http://ssndob.so/search/results">US SSNDOB Search History</a></li>
+							<li><a href="http://ssndob.so/history">US SSNDOB History</a></li>
+							<li><a href="http://ssndob.so/ukdob">UKDOB Search</a></li>
+							<li><a href="http://ssndob.so/ukdob/history">UKDOB History</a></li>
+							<li class="dropdown">
+								<a href="http://ssndob.so/used" class="dropdown-toggle" data-toggle="dropdown">Used SSNDOB<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="http://ssndob.so/used">List &amp; Search</a></li>
+									<li><a href="http://ssndob.so/used/history">History</a></li>
+								</ul>
+							</li>
+							<li><a style="color:red;" href="http://ssndob.so/tickets">TICKETS</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h3>
+				Result(count 1)
+			</h3>
+				<table class="table table-condensed">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Names</th>
+			<th>DOB Year</th>
+			<th>Address</th>
+			<th>SSN</th>
+			<th>DOB</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>KATHRYN T WATERS<br>
+KATHRYN M TAMA<br>
+KATHRYN TAMA<br>
+KATHRYN T TAMA</td>
+			<td>1952</td>
+			<td>421 Campana Pl Arroyo Grande, CA 93420<br>
+2931 Cathedral Ave NW Washington, DC 20008<br>
+5306 W Lawrence Ave Ste 10 Chicago, IL 60630<br>
+3105 Hawthorne St NW Washington, DC 20008<br>
+2931 Cathedral Ave Northwest Ave Washington, DC 20008<br>
+2931 Cathedral Avenue Northwest Ave Washington, DC 20008<br>
+180 Harbor Dr Ste 112 Sausalito, CA 94965<br>
+40 LINCOLN PARK AVENUE SAN ANSELMO, CA 94960<br>
+40 LINCOLN PARK SAN ANSELMO, CA 94960<br>
+0 LINCOLN PARK S SAN ANSELMO, CA 94960</td>
+			<td id="i48460672ssn">---</td>
+			<td id="i48460672dob">---</td>
+			<td data-id="48460672" data-b="0" id="buyInfo"><a>Buy</a></td>
+		</tr>
+	</tbody>
+</table>
+		</div>
+	
+</body></html>
