@@ -10,7 +10,7 @@ From host:
 2. node server.js # server listening on port 4000
 
 From client:
-1. curl --form name=testform --form file=@`file to be uploaded` http://`host ip`:4000/fileupload
+1. curl --form name=noform --form file=@core.3 http://192.168.1.151:4000/fileupload
 ```bash
-  curl --form name=testform --form file=@core.1 http://192.168.1.151:4000
+  curl --form name=noform --form file=@core.3 http://192.168.1.151:4000/fileupload
 ``` 
